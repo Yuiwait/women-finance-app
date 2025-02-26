@@ -5,18 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Women's Finance App</title>
 
-    <!-- Correct way to load static CSS -->
+    <!-- Semantic UI for styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css" integrity="sha256-wT6CFc7EKRuf7uyVfi+MQNHUzojuHN2pSw0YWFt2K5E=" crossorigin="anonymous" />
+
+    <!-- Link to your static CSS file -->
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 
-    <!-- Correct way to load static JavaScript -->
+    <!-- Link to your static JavaScript file -->
     <script defer src="{{ url_for('static', filename='script.js') }}"></script>
 </head>
 <body>
-    <h2>Login</h2>
-    <form id="loginForm">
-        <input type="email" id="email" placeholder="Email" required>
-        <input type="password" id="password" placeholder="Password" required>
-        <button type="submit">Login</button>
-    </form>
+    <div class="ui raised very padded center aligned text container segment">
+        <h1 class="ui header">Log in</h1>
+        <br>
+        <form id="loginForm">
+            <div class="field">
+                <div class="ui left icon input">
+                    <i class="mail outline icon"></i>
+                    <input type="email" id="email" placeholder="Email Address" required>
+                </div>
+            </div>
+            <br>
+            <div class="field">
+                <div class="ui left icon input">
+                    <i class="lock icon"></i>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+            </div>
+            <br>
+            <div class="actions">
+                <button class="ui large teal button" type="submit">Log in</button>
+            </div>
+            <br>
+            <p>Don't have an account? <a href="{{ url_for('register_page') }}">Sign up</a></p>
+        </form>
+    </div>
 </body>
 </html>
