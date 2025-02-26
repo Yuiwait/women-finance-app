@@ -1,0 +1,124 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #000;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Navbar */
+nav {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Dark Mode Toggle Button */
+#darkModeToggle {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+#darkModeToggle:hover {
+    background-color: #222;
+}
+
+/* Smooth transition for UI elements */
+* {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animated hover effects */
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Fade-in effect for dashboard content */
+#dashboard {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Light Mode (Default) */
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Dark mode button styling */
+.dark-mode #darkModeToggle {
+    background-color: #ff9800;
+    color: black;
+}
+
+.dark-mode #darkModeToggle:hover {
+    background-color: #ff5722;
+}
+
+/* Dark mode Navbar & Dashboard */
+.dark-mode #navbar,
+.dark-mode #dashboard {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+/* Dark mode Expense Chart */
+.dark-mode canvas {
+    filter: brightness(0.9);
+}
+
+/* Dark mode input fields */
+.dark-mode input,
+.dark-mode button {
+    background-color: #333;
+    color: white;
+    border: 1px solid #777;
+}
+
+.dark-mode input::placeholder {
+    color: #bbb;
+}
+
+/* Dark mode links */
+.dark-mode nav ul li a {
+    color: #ff9800;
+}

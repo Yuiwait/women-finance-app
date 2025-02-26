@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Finance App</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <!-- Chart.js (Load only one version) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Custom Scripts -->
+<script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div id="navbar">
+
+    </div>
+
+    <main>
+
+        <!-- Dashboard Section -->
+        <div id="dashboard">
+            <h2>Dashboard</h2>
+            <p>Welcome to your financial dashboard!</p>
+
+            <!-- Expense Chart -->
+            <h2>Expense Overview</h2>
+            <canvas id="expenseChart"></canvas>
+        </div>
+
+        <!-- Expense Input Form -->
+        <section id="expense-section">
+            <h2>Add a New Expense</h2>
+            <form id="expenseForm">
+                <label for="category">Category:</label>
+                <input type="text" id="category" required placeholder="E.g., Rent, Food">
+
+                <label for="amount">Amount (₹):</label>
+                <input type="number" id="amount" required placeholder="Enter amount">
+
+                <button type="submit">➕ Add Expense</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Women's Finance App</p>
+    </footer>
+
+</body>
+</html>
